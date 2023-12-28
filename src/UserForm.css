@@ -1,0 +1,124 @@
+.user-form-container {
+    margin: 20px;
+    font-family: 'Arial, sans-serif';
+  }
+  
+  .form-title {
+    color: #333;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .user-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  .submit-button,
+  .show-users-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .user-list-container {
+    margin-top: 20px;
+  }
+  
+  .user-list-title {
+    color: #333;
+    font-size: 20px;
+  }
+  
+  .user-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .user-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+  }
+  
+  .delete-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Adjust react-datepicker styles */
+.react-datepicker {
+  font-size: 16px;
+}
+
+.react-datepicker__header {
+  background-color: #007bff;
+}
+
+.react-datepicker__day--selected {
+  background-color: #007bff;
+}
+
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__month-text--keyboard-selected {
+  border-radius: 0;
+  background-color: #007bff;
+  color: #fff;
+}
+
+.react-datepicker__time-container {
+  width: 100%;
+}
+
+.react-datepicker__time-box {
+  width: 50%;
+}
+
+.react-datepicker__time-list {
+  padding: 0;
+  list-style: none;
+}
+
+.react-datepicker__time-list-item {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.react-datepicker__time-list-item:hover {
+  background-color: #f0f0f0;
+}
