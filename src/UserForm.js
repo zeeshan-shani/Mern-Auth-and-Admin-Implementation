@@ -3,9 +3,11 @@ import React, { useState, useEffect } from "react";
 import "./UserForm.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import AdminPopup from "./AdminPopup"; // Import AdminPopup component
+import { useNavigate } from "react-router-dom";
 
 const UserForm = () => {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -13,8 +15,7 @@ const UserForm = () => {
     selectedDate: new Date(),
   });
   const [users, setUsers] = useState([]);
-  const [showUsers, setShowUsers] = useState(false);
-  const [showAdminPopup, setShowAdminPopup] = useState(false); // State to control the display of the AdminPopup
+  const [showUsers, setShowUsers] = useState(false); // State to control the display of the AdminPopup
 
   const fetchUsers = async () => {
     try {
@@ -73,19 +74,7 @@ const UserForm = () => {
 
   // Function to handle the Admin button click
   const handleAdminClick = () => {
-    setShowAdminPopup(true);
-  };
-
-  // Function to close the AdminPopup
-  const handleCloseAdminPopup = () => {
-    setShowAdminPopup(false);
-  };
-
-  // Function to handle login after successful admin login
-  const handleAdminLogin = () => {
-    // Redirect or perform actions after admin login
-    // In this example, you can show a congratulations message on a new page
-    alert("Admin login successful! Redirecting to a new page...");
+    navigate('/loginform');
   };
 
   return (
@@ -142,11 +131,11 @@ const UserForm = () => {
         </button>
       </form>
 
-      <button onClick={handleShowUsers} className="show-users-button">
+      {/* <button onClick={handleShowUsers} className="show-users-button">
         Show All Users
-      </button>
+      </button> */}
 
-      <button onClick={handleAdminClick} className="admin-button">
+      <button target="blank" onClick={handleAdminClick} className="show-users-button">
         Admin
       </button>
 
@@ -168,14 +157,6 @@ const UserForm = () => {
             ))}
           </ul>
         </div>
-      )}
-
-      {/* Display AdminPopup when showAdminPopup is true */}
-      {showAdminPopup && (
-        <AdminPopup
-          onClose={handleCloseAdminPopup}
-          onLogin={handleAdminLogin}
-        />
       )}
     </div>
   );
